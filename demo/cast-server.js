@@ -33,8 +33,8 @@ app.get('/cast', function(req, res) {
 });
 /* -------------------- END OF TEST URLS --------------------*/
 
-app.use('/src', express.static(__dirname + '../src'));
-app.use('/dist', express.static(__dirname + '../dist'));
+app.use('/src', express.static(__dirname + '/../src'));
+app.use('/dist', express.static(__dirname + '/../dist'));
 app.use('/demo', express.static(__dirname));
 
 http.listen(HTTP_PORT, function () {
