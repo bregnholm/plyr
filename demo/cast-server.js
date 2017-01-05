@@ -22,7 +22,7 @@ app.use(compression());
 
 app.use(cors({
   allowedOrigins: [
-  	'jsfiddle.net', '*'
+  	'*.jsfiddle.net', '*.jshell.net'
   ]
 }));
 
