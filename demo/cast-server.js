@@ -4,6 +4,7 @@ var app = express();
 var fs = require('fs');
 var compression = require('compression');
 var crypto = require('crypto');
+var cors = require('express-cors')
 
 var http = require('http').createServer(app);
 
@@ -18,6 +19,13 @@ var options = {
 
 app.use(morgan('combined'));
 app.use(compression());
+
+app.use(cors({
+  allowedOrigins: [
+  	'jsfiddle.net', '*'
+  ]
+}));
+
 
 /* ------------------------ TEST URLS ------------------------*/
 app.get('/', function (req, res) {
